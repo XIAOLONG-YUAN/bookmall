@@ -1,4 +1,4 @@
-package com.yuan.bookmall.common;
+package common;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
