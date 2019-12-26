@@ -27,9 +27,11 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
+
+
 mybatis-plus:
-  mapper-locations: classpath*:com/enovell/ion/mapper/**/*Mapper.xml
-  type-aliases-package: com.enovell.ion.pojo.*
+  mapper-locations: classpath*:com/yuan/bookmall/mapper/**/*Mapper.xml
+  type-aliases-package: com.yuan.bookmall.pojo.*
   #  # 配置扫描通用枚举 # 支持统配符 * 或者 ; 分割
   #type-enums-package: com.abbottliu.sys.enums,com.abbottliu.enums
   # 启动时是否检查 MyBatis XML 文件的存在，默认不检查

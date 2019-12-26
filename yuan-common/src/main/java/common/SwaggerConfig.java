@@ -37,7 +37,7 @@ public class SwaggerConfig {
         List<Parameter> aParameters = new ArrayList<Parameter>();
         aParameters.add(aParameterBuilder.build());
         return new Docket(DocumentationType.SWAGGER_2).groupName("v1").select()
-                .apis(RequestHandlerSelectors.basePackage("com.enovell.ion.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.yuan.bookmall.controller"))
                 .paths(PathSelectors.any()).build().apiInfo(apiInfo()).globalOperationParameters(aParameters);
     }
 

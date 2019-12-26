@@ -29,9 +29,9 @@ public class GeneratorServiceEntity {
 
     @Test
     public void generateCode() {
-        String packageName = "com.enovell.ion";
-        String moduleName = "ionAppApplicationInfo";
-        String[] tableNames = {"ION_APP_APPLICATION_INFO"};   //表名[]，需要修改
+        String packageName = "com.yuan.bookmall";
+        String moduleName = "scTest";
+        String[] tableNames = {"SC_TEST"};   //表名[]，需要修改
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
         generateByTables(serviceNameStartWithI, packageName,moduleName,tableNames);
     }
@@ -51,7 +51,7 @@ public class GeneratorServiceEntity {
             .setBaseResultMap(true) // XML ResultMap
             .setBaseColumnList(true)// XML columList
              .setSwagger2(true)
-            .setAuthor("quhongwei");
+            .setAuthor("yxl");
         if (!serviceNameStartWithI) {
             // 自定义文件命名，注意 %s 会自动填充表实体属性！
             // config.setMapperName("%sDao");

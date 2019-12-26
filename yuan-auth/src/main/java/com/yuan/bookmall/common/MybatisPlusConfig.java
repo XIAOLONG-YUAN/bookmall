@@ -1,4 +1,4 @@
-package common;
+package com.yuan.bookmall.common;
 
 import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
 import com.baomidou.mybatisplus.core.injector.ISqlInjector;
