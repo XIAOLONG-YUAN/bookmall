@@ -1,6 +1,14 @@
 spring:
+  application:
+    name: nacos-config
+  cloud:
+    nacos:
+      config:
+        file-extension: properties
+        group: DEFAULT_GROUP
+        server-addr: 127.0.0.1:8848
   datasource:
-    url: jdbc:mysql://47.103.98.59:43000/IONBase?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.101.221.57:10050/IONBase?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 1qaz@WSX
     type: com.alibaba.druid.pool.DruidDataSource
@@ -27,7 +35,6 @@ spring:
       #打开PSCache，并指定每个连接上PSCache的大小。oracle设为true，mysql设为false。分库分表较多推荐设置为false
       pool-prepared-statements: false
       max-pool-prepared-statement-per-connection-size: 20
-
 
 mybatis-plus:
   mapper-locations: classpath*:com/yuan/bookmall/mapper/**/*Mapper.xml
