@@ -9,6 +9,8 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import org.junit.Test;
 
+import java.io.File;
+
 /**
  * <p>
  * 测试生成代码
@@ -29,21 +31,24 @@ public class GeneratorServiceEntity {
 
     @Test
     public void generateCode() {
+        String path = new File(System.getProperty("user.dir")).getParent()+"\\yuan-activity-plan";
         String packageName = "com.yuan.bookmall";
         String moduleName = "scTest";
         String[] tableNames = {"SC_TEST"};   //表名[]，需要修改
         boolean serviceNameStartWithI = false;//user -> UserService, 设置成true: user -> IUserService
-        generateByTables(serviceNameStartWithI, packageName,moduleName,tableNames);
+        generateByTables(serviceNameStartWithI, packageName,moduleName,path,tableNames);
     }
 
-    private void generateByTables(boolean serviceNameStartWithI, String packageName, String moduleName, String... tableNames){
+    private void generateByTables(boolean serviceNameStartWithI, String packageName, String moduleName,String path, String... tableNames){
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
         // 选择 freemarker 引擎，默认 Veloctiy
         // mpg.setTemplateEngine(new FreemarkerTemplateEngine());
         // 全局配置
         GlobalConfig config = new GlobalConfig();
-        config.setOutputDir(System.getProperty("user.dir")+"\\src\\main\\java")
+        String currentPath = System.getProperty("user.dir");
+        String outPutDir = path == null ? currentPath : path;
+        config.setOutputDir(outPutDir+"\\src\\main\\java")
             .setFileOverride(false)  //TODO 是否覆盖已有文件
             .setOpen(false)         //是否打开输出目录
             .setActiveRecord(false) // 不需要ActiveRecord特性的请改为false

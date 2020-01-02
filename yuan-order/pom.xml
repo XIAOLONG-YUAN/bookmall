@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>yuan-auth</artifactId>
+    <artifactId>yuan-order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>yuan-auth</name>
-    <description>auth module</description>
+    <name>yuan-order</name>
+    <description>order module</description>
 
     <properties>
         <java.version>1.8</java.version>

@@ -12,11 +12,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * <p>
@@ -43,7 +39,11 @@ public class ScTestController {
         qw.eq(StringUtils.isNotEmpty(Condition), "SC_NAME", Condition).orderByAsc("SC_OPERATOR_TIME");
         IPage page1 = scTestService.page(page,qw);
         return ServerResponse.createSuccess(page1);
+    }
 
+    @GetMapping(value = "/echo/{string}")
+    public String echo(@PathVariable String string) {
+        return string;
     }
 
 }

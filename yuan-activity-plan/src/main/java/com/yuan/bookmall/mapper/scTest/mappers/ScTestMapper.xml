@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuan.bookmall.mapper.scTest.ScTestMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.yuan.bookmall.pojo.scTest.ScTest">
+        <id column="SC_ID" property="scId" />
+        <result column="SC_NAME" property="scName" />
+        <result column="SC_OPERATOR" property="scOperator" />
+        <result column="SC_OPERATOR_TIME" property="scOperatorTime" />
+        <result column="SC_DELFLAG" property="scDelflag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        SC_ID, SC_NAME, SC_OPERATOR, SC_OPERATOR_TIME, SC_DELFLAG
+    </sql>
+
+</mapper>

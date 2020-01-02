@@ -13,6 +13,8 @@
     <modules>
         <module>yuan-auth</module>
         <module>yuan-common</module>
+        <module>yuan-order</module>
+        <module>yuan-activity-plan</module>
     </modules>
 
     <dependencyManagement>
