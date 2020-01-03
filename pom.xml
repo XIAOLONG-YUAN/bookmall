@@ -15,6 +15,7 @@
         <module>yuan-common</module>
         <module>yuan-order</module>
         <module>yuan-activity-plan</module>
+        <module>yuan-generator</module>
     </modules>
 
     <dependencyManagement>

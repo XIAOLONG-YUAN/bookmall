@@ -1,4 +1,4 @@
-package com.yuan.bookmall.generator;
+package generator;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -31,7 +31,7 @@ public class GeneratorServiceEntity {
 
     @Test
     public void generateCode() {
-        String path = new File(System.getProperty("user.dir")).getParent()+"\\yuan-activity-plan";
+        String path = new File(System.getProperty("user.dir")).getParent()+"\\yuan-order";
         String packageName = "com.yuan.bookmall";
         String moduleName = "scTest";
         String[] tableNames = {"SC_TEST"};   //表名[]，需要修改
