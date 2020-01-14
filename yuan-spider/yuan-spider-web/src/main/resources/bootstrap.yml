@@ -6,7 +6,7 @@ spring:
 #    在bootstrap.yml添加applicationName 默认实现nacos，会自动连接
 #    name: yuan-spider-web
   datasource:
-    url: jdbc:mysql://139.196.170.97:3306/spiderflow?useSSL=false&useUnicode=true&characterEncoding=UTF8&autoReconnect=true
+    url: jdbc:mysql://139.196.170.97:3306/YuanBookMall?useSSL=false&useUnicode=true&characterEncoding=UTF8&autoReconnect=true
     username: root
     password: 0p;/.lo98ik,
     type: com.alibaba.druid.pool.DruidDataSource
