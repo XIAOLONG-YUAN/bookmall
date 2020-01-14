@@ -16,6 +16,7 @@
         <module>yuan-order</module>
         <module>yuan-activity-plan</module>
         <module>yuan-generator</module>
+        <module>yuan-spider</module>
     </modules>
 
     <dependencyManagement>
