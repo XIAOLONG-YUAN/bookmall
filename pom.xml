@@ -11,12 +11,10 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>yuan-auth</module>
         <module>yuan-common</module>
         <module>yuan-order</module>
-        <module>yuan-activity-plan</module>
-        <module>yuan-generator</module>
         <module>yuan-spider</module>
+        <module>yuan-eureka</module>
     </modules>
 
     <dependencyManagement>
@@ -24,7 +22,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.RELEASE</version>
+                <version>Greenwich.SR6</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -61,18 +59,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <spring-boot.version>1.5.22.RELEASE</spring-boot.version>
     </properties>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                    <encoding>UTF-8</encoding>
+                    <fork>true</fork>
+                    <addResources>true</addResources>
                 </configuration>
             </plugin>
         </plugins>

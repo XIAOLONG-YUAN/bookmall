@@ -1,0 +1,8 @@
+com/yuan/bookmall/pojo/scTest/ScTest.class
+com/yuan/bookmall/common/MyMetaObjectHandler.class
+com/yuan/bookmall/service/scTest/impl/ScTestServiceImpl.class
+com/yuan/bookmall/service/scTest/ScTestService.class
+com/yuan/bookmall/controller/scTest/ScTestController.class
+com/yuan/bookmall/common/MybatisPlusConfig.class
+com/yuan/bookmall/YuanOrderApplication.class
+com/yuan/bookmall/mapper/scTest/ScTestMapper.class

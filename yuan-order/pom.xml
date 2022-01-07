@@ -9,10 +9,6 @@
     </parent>
 
     <artifactId>yuan-order</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-
-    <name>yuan-order</name>
-    <description>order module</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -68,37 +64,5 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-
-        <!--在打包时发现.xml的文件丢失 必须添加 -->
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*</include>
-                </includes>
-            </resource>
-        </resources>
-    </build>
 
 </project>
