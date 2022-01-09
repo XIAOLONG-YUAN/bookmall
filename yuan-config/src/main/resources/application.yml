@@ -1,33 +1,20 @@
-server:
-  port: 8082
+########################################################
+# 配置中心服务默认端口
+########################################################
+server.port: 8081
 
 spring:
   application:
-    name: yuan-order
-  profiles:
-    active: dev
-  # 这个参数设置为true，那么就允许相同key情况下beanDefinition实例的覆盖
-  main.allow-bean-definition-overriding: true
-
-  ########################################################
-  # 配置中心
-  ########################################################
+    name: yuan-config
   cloud:
     config:
-      #指定配置文件
-      profile: dev
-      failFast: true
-      label: master
-      retry:
-        multipliter: 1000
-        initial-interval: 1.2
-        max-interval: 2000
-        max-attempts: 6
-      username: ${config.user:604159949@qq.com}
-      password: ${config.password:123456}
-      discovery:
-        enabled: true
-        service-id: YUAN-CONFIG
+      server:
+        git:
+          uri: https://gitee.com/yuanxiaolong/config-test.git
+          searchPaths:
+          username: 604159949@qq.com
+          password: 123456
+        default-label: master
 ########################################################
 ### Eureka 注册中心配置
 ########################################################

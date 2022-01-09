@@ -1,16 +1,17 @@
-package com.yuan.bookmall;
+package com.yuan.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 @SpringBootApplication
-// 客户端注册服务发现
+@EnableConfigServer
 @EnableDiscoveryClient
-public class YuanOrderApplication {
+public class YuanConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(YuanOrderApplication.class, args);
+        SpringApplication.run(YuanConfigApplication.class, args);
     }
 
 }

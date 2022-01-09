@@ -3,6 +3,7 @@ server:
 # 默认单机配置
 eureka:
   server:
+    # 关闭自我保护，如果注册服务在短时间内宕机，又重新注册，eureka会保存宕机时的服务，关闭即不会保存
     enableSelfPreservation: false
     # 清理无效节点的时间间隔，默认60秒，开发环境建议设置偏小值
     evictionIntervalTimerInMs: 10000
